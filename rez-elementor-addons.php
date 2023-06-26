@@ -50,12 +50,12 @@ if (defined('ELEMENTOR_PATH') && class_exists('Elementor\Plugin')) {
 function my_plugin_enqueue_styles()
 {
 	// Enqueue the Slick Carousel CSS
-	wp_enqueue_style('rwhm_slick-carousel-css', plugins_url('/css/rwhm_slick-carousel-css.css', __FILE__), array(), '1.0.0');
+	wp_enqueue_style('rwhm_slick-carousel-css', plugins_url('/inc/css/rwhm_slick-carousel-css.css', __FILE__), array(), '1.0.0');
 
 	// Enqueue the Slick Carousel JS
 
-	wp_enqueue_script('custom-script', plugins_url('/js/rwhm_slick-carousel.js', __FILE__), array('jquery'), '1.0', true);
-	wp_enqueue_style('my-plugin-styles', plugins_url('/css/my-plugin-styles.css', __FILE__), array(), '1.0.0');
+	wp_enqueue_script('custom-script', plugins_url('/inc/js/rwhm_slick-carousel.js', __FILE__), array('jquery'), '1.0', true);
+	wp_enqueue_style('my-plugin-styles', plugins_url('/inc/css/my-plugin-styles.css', __FILE__), array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'my_plugin_enqueue_styles');
 
